@@ -1,0 +1,381 @@
+@import '../../css/px2rem.scss';
+$designWidth: 750;
+
+.applyTableInfo_print {
+  #printCont{
+    background: #fff;
+    margin-bottom: 82px;
+    padding-bottom: 10px;
+  }
+  // color: red;
+  .page {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,0.35);
+
+    .tipcolumn1 {
+      width: px2rem(710);
+      height: px2rem(362-88);
+      // top: 50%;
+      // left: 50%;
+      // margin-left: px2rem(-355);
+      // margin-top: px2rem(-181+44);
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      // opacity: 0;
+      .column21 {
+        width: px2rem(710-94);
+        background: white;
+        border-radius: px2rem(10) px2rem(10) 0 0;
+        text-align: center;
+        font-size: px2rem(28);
+        color: #666666;
+        padding: px2rem(58) px2rem(47) px2rem(49);
+
+        .title {
+          display: block;
+          font-size: px2rem(34);
+          font-weight: bold;
+        }
+
+        .content {
+          margin-top: px2rem(24);
+          display: block;
+          text-align: left;
+        }
+      }
+
+      .btn {
+        height: px2rem(88);
+        line-height: px2rem(88);
+        border-radius: 0 0 px2rem(10) px2rem(10);
+        background: white;
+        border-top: px2rem(2) solid #D8D8DC;
+        font-size: px2rem(34);
+
+        .cancel {
+          text-align: center;
+          width: 50%;
+          float: left;
+          border-right: px2rem(2) solid #D8D8DC;
+          color: #12b7f5;
+        }
+
+        .submit {
+          text-align: center;
+          right: right;
+          color: #12b7f5;
+        }
+
+      }
+    }
+  }
+
+  .page1 {
+    border:1px solid #e8e8e8;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    margin-right: 14px;
+    margin-left: 14px;
+
+    #Title_1,#Title_2,#Title_3,#Title_4,#Title_5,#Title_6,#Title_7,#Title_8{
+      cursor: pointer;
+      background: #F8F8F8;
+      padding-left: 15px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e8e8e8;
+      padding-right: 16px;
+      margin-bottom: 17px;
+      span{
+        display: inline-block;
+        border-left: 4px solid #188EEE;
+        padding-left: 11px;
+        font-size: 14px;
+        color: #333;
+        height: 16px;
+        line-height: 16px;
+        font-weight: bold;
+      }
+      img{
+        float: right;
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .downline {
+      // border-bottom: px2rem(2) solid #f0f0f0;
+    }
+
+    .suojin {
+      padding-left: px2rem(33);
+    }
+
+    .gray {
+      // background: #f0f0f0 !important;
+    }
+    .info:nth-child(odd){
+      background: #F9F9F9;
+    }
+    .info:nth-child(even){
+      background: #fff;
+    }
+    .info {
+      background: white;
+      font-size: 0;
+      box-sizing: border-box;
+      position: relative;
+      margin-left: 16px;
+      margin-bottom: 4px;
+      .mask{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        // background: red;
+        opacity: 0
+      }
+      // display: inline-block;
+      // vertical-align: top;
+      // padding-top: px2rem(0);
+      // padding-bottom: px2rem(5);
+      select {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        // width: px2rem(750);
+        // height: px2rem(60);
+        display: none;
+      }
+
+      .datainput {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+      }
+
+      .you {
+        font-size: px2rem(20);
+        height: px2rem(10);
+        // position:absolute;
+        // top: 34%;
+        // margin-top: px2rem(30);
+        display: inline-block;
+        vertical-align: middle;
+        transform: rotate(0deg);
+        // padding-top: 5%;
+        // transform: rotate(90deg);
+      }
+      .checkbox{
+        width: 220px;
+        position: absolute;
+        left: 650px;
+        bottom:33%;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 14px;
+        input{
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+      .inputSpan{
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .rotate {
+        transform: rotate(90deg);
+      }
+
+      .key {
+        color: #6F6F6F;
+        display: inline-block;
+        font-size: 14px;
+        vertical-align: middle;
+        width: 32%;
+        word-break: break-all;
+        // background: white;
+        padding: px2rem(20) px2rem(31) px2rem(20) 17px;
+
+      }
+      .div_i{
+        display: inline-block;
+        position: absolute;
+        padding-top: px2rem(3);
+      }
+      .tanhao {
+
+        color: #12b7f9;
+        // padding-top: px2rem(15);
+        // padding-top: px2rem(110);
+        font-size: px2rem(32);
+        // height: px2rem(20);
+        // display: inline-block;
+
+        // position:absolute;
+        // top: px2rem(10);
+      }
+
+      .red {
+        color: red;
+      }
+
+      .huise {
+        color: #6F6F6F;
+      }
+
+      .value {
+        outline: none;
+        border: 0;
+        display: inline-block;
+        font-size: 14px;
+        vertical-align: middle;
+        width: 46%;
+        word-break: break-all;
+        // background: white;
+        padding: px2rem(20) px2rem(21) px2rem(20) px2rem(31);
+      }
+
+      .triangle {
+        opacity: 0;
+        // float: right;
+        display: inline-block;
+        vertical-align: middle;
+        // margin-top: px2rem(40);
+        // margin-right: px2rem(50);
+        // width: 0;
+        // height: 0;
+        border-left: px2rem(15) solid transparent;
+        border-right: px2rem(15) solid transparent;
+        border-top: px2rem(20) solid #13b7f6;
+      }
+    }
+  }
+
+  .page1.hidecont{
+    overflow: hidden;
+    height: 38px;
+    transition: height 2s;
+    -moz-transition: height 2s;
+    -webkit-transition: height 2s;
+    -o-transition: height 2s;
+  }
+  #page8{
+    padding-bottom: 0;
+  }
+
+  .column1 {
+    background: white;
+    height: px2rem(120);
+    background: white;
+    padding-top: px2rem(34);
+    padding-bottom: px2rem(60);
+    padding-right: 16px;
+    text-align: right;
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    left: 0;
+    .btn {
+      width: 80px;
+      height: 24px;
+      line-height: 24px;
+      text-align: center;
+      background: #188EEE;
+      font-size: 14px;
+      color: #fff;
+      border-radius: 4px;
+      img{
+        display: inline-block;
+        vertical-align: middle;
+      }
+      span{
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+    }
+  }
+
+  #tianbiao_wrapper {
+    width: 100%;
+    top: px2rem(0);
+    position: absolute;
+    background: white;
+    bottom: px2rem(120);
+    border-bottom: px2rem(2) solid #f3f4f6;
+    // bottom:px2rem(0);
+    // top: px2rem(550);
+    // right: 0;
+    // bottom: px2rem(79);
+    // left: 0;
+    // height: px2rem(622);
+    // max-height: px2rem(600);
+    overflow: hidden;
+    /* Prevent native touch events on Windows */
+    -ms-touch-action: none;
+    /* Prevent the callout on tap-hold and text selection */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* Prevent text resize on orientation change, useful for web-apps */
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+
+  #tianbiao_scroller {
+    // position: absolute;
+    width: 100%;
+    // height: px2rem(600);
+    /* Prevent elements to be highlighted on tap */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /* Put the scroller into the HW Compositing layer right from the start */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  .printInfoBtn{
+    background: #fff;
+    padding:12px 14px 8px 0;
+    text-align: right;
+    .pBtn{
+      display: inline-block;
+      background: #188EEE;
+      color: #fff;
+      width: 80px;
+      text-align: center;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      font-size: 12px;
+      cursor: pointer;
+      border-radius: 4px;
+      img{
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 4px;
+      }
+      span{
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+}

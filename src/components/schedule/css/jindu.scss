@@ -1,0 +1,371 @@
+@import '../../css/px2rem.scss';
+$designWidth: 750;
+
+.addvisa {
+  margin-left: 313px;
+  min-width: 596px;
+  // min-height: 700px;
+  margin-top: 96px;
+  margin-right: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  box-shadow: 1px 1px 2px #D8D8D8;
+  
+  background: #fff;
+
+  .list {
+    // background: red;
+    // height: px2rem(1206);
+    .inProcess {
+      color: white;
+      font-size: px2rem(26);
+      background: #A6DFF6;
+      height: px2rem(77);
+      // height: px2rem(200);
+      line-height: px2rem(77);
+      padding-left: px2rem(22);
+
+      img {
+        // width: auto;
+        // height: auto;
+      }
+    }
+
+    .pending {
+      // height: px2rem(349);
+      // background: green;
+      .column1 {
+        background: white;
+        height: px2rem(349-100-171);
+        line-height: px2rem(349-100-171);
+        color: #ABABAB;
+        font-size: px2rem(28);
+        padding-left: px2rem(22);
+
+        .editbtn {
+          // display: inline-flex;
+          float: right;
+          // display: inline-block;
+          margin-right: px2rem(20);
+          color: #12b7f5;
+          font-size: px2rem(42);
+        }
+      }
+
+      .column2 {
+        background: #FCFCFC;
+        height: px2rem(171);
+        
+        // background: red;
+
+        .visastyle {
+          font-size: px2rem(30);
+          color: #333333;
+
+          .countryIco {
+            float: left;
+            width: px2rem(60);
+            height: px2rem(40);
+            margin-left: px2rem(20);
+            margin-top: px2rem(20);
+            margin-right: px2rem(20);
+            // background: blue;
+          }
+        }
+
+        .username {
+          display: block;
+          font-size: px2rem(28);
+          color: #333333;
+          margin-left: px2rem(100);
+          margin-top: px2rem(55);
+        }
+      }
+
+      .column3 {
+        height: px2rem(100);
+        line-height: px2rem(100);
+        background: WHITE;
+        // border-bottom: px2rem(2) solid #A6DFF6;
+        // line-height: px2rem(100);
+        // display:flex;
+        // position: absolute;
+        position: relative;
+
+        .goon {
+          position: absolute;
+          top: 50%;
+          margin-top: px2rem(-35);
+          right: px2rem(20);
+          // margin-right:px2rem(20);
+          background: white;
+          height: px2rem(69);
+          line-height: px2rem(69);
+          text-align: center;
+          width: px2rem(169);
+          color: #12b7f5;
+          font-size: px2rem(28);
+          border: px2rem(2) solid #12b7f5;
+          border-radius: px2rem(10);
+        }
+        .jindu1{
+          color:white;
+          background: #12b7f5;
+        }
+      }
+
+      .column4 {
+        background: #f3f4f6;
+        height: px2rem(18);
+      }
+    }
+
+    .addNewPend {
+      position: absolute;
+      bottom: px2rem(10);
+      color: white;
+      width: px2rem(710);
+      height: px2rem(88);
+      line-height: px2rem(88);
+      text-align: center;
+      background: #13b7f6;
+      border-radius: px2rem(15);
+      left: 50%;
+      font-size: 0;
+      margin-left: px2rem(-355);
+
+      .tianjia {
+        position: absolute;
+        left: 32.8%;
+        top:50%;
+        margin-top: px2rem(-39);
+        // margin-top: px2rem(5);
+        // float: left;
+        // width: px2rem(36);
+        // height: px2rem(36);
+        font-size: px2rem(36);
+        // background: green;
+        // margin-left: px2rem(236);
+        // top: 50%;
+        // top: 50%;
+      }
+
+      .coutent {
+        position: absolute;
+        left: 42%;
+        font-size: px2rem(32);
+        // top: 50%;
+      }
+    }
+  }
+
+  .jindu {
+
+    .column1{
+      height: 59px;
+      position: relative;
+      color: #333;
+      font-size: 14px;
+      line-height: 59px;
+      border-bottom: 1px solid #e2e2e2;
+      margin-bottom: 32px;
+      padding-left: 20px;
+      span{
+        margin-right: 40px;
+      }
+    }
+    .column2{
+      padding-left: 20px;
+      padding-right: 20px;
+      .p1{
+        background: #fff;
+        .line1{
+          height: 14px;
+          width: 1px;
+          background: #AAAAAA;
+          margin-left: 20px;
+        }
+        .line2{
+          height: 8px;
+          width: 1px;
+          background: #AAAAAA;
+          margin-left: 20px;
+        }
+        .date{
+          height: 25px;
+          line-height: 25px;
+          width: 145px;
+          background: white;
+          border-radius: 25px;
+          padding-left: 18px;
+          position: relative;
+          box-shadow:1px 1px 2px #CFCFCF;
+          border: 1px solid #e2e2e2;
+          .yuan{
+            // vertical-align: middle;
+            position: absolute;
+            top:50%;
+            margin-top: px2rem(-6);
+            height: px2rem(12);
+            width: px2rem(12);
+            border-radius: 50%;
+            background: #12b7f5;
+          }
+          .c{
+            padding-left: 10px;
+            font-size: 14px;
+            color: #666666;
+          }
+        }
+        .content{
+          // height: 70px;
+          padding: 10px;
+          border:1px solid #e2e2e2;
+          background: white;
+          box-shadow:1px 1px 2px #CFCFCF;
+          border-radius: 2px;
+          position: relative;
+          // .ico{
+          //   background-image: url('/static/img/1.png');
+          //   background-repeat:no-repeat;
+          //   background-size:100% 100%;
+          //   width: px2rem(72);
+          //   height: px2rem(72);
+          //   margin-right: px2rem(19);
+          //   position: absolute;
+          //   top: 50%;
+          //   margin-top: px2rem(-36);
+          // }
+          img{
+            display: inline-block;
+            width: 40px;
+            height:40px;
+            margin-right: 10px;
+          }
+          .c{
+            display: inline-block;
+              // position: absolute;
+              // top: 50%;
+              // margin-top: px2rem(-85/2);
+              // left: 20%;
+            .c1{
+              font-size: 16px;
+              display: block;
+              color: #333333;
+            }
+            .c2{
+              display: block;
+              // margin-top: px2rem(16);
+              font-size: 14px;
+              color: #949494;
+            }
+          }
+        }
+      }
+      .p1:nth-child(1){
+        // background: red;
+        .line1{
+          display: none;
+        }
+      }
+      .ding{
+        height: px2rem(0);
+        background: #f0f0f0;
+      }
+    }
+  }
+  // text-align: center;
+  // body:before {
+  //   white-space: pre;
+  //   font-family: monospace;
+  //   content: "Errno::ENOENT: No such file or directory @ rb_sysopen - addvisa.scss";
+  // }
+  #addvisa_wrapper {
+    // height: 74.4%;
+    width: 100%;
+    top: px2rem(77);
+    position: absolute;
+    bottom: px2rem(110);
+    border-bottom: px2rem(2) solid #f3f4f6;
+    // bottom:px2rem(0);
+    // top: px2rem(550);
+    // right: 0;
+    // bottom: px2rem(79);
+    // left: 0;
+    // height: px2rem(622);
+    // max-height: px2rem(600);
+    overflow: hidden;
+    /* Prevent native touch events on Windows */
+    -ms-touch-action: none;
+    /* Prevent the callout on tap-hold and text selection */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* Prevent text resize on orientation change, useful for web-apps */
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+
+  #addvisa_scroller {
+    // position: absolute;
+    width: 100%;
+    // height: px2rem(600);
+    /* Prevent elements to be highlighted on tap */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /* Put the scroller into the HW Compositing layer right from the start */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  #addvisajindu_wrapper {
+    // height: 74.4%;
+    width: 100%;
+    top: px2rem(0);
+    position: absolute;
+    bottom: px2rem(0);
+    // border-bottom: px2rem(2) solid #f3f4f6;
+    // bottom:px2rem(0);
+    // top: px2rem(550);
+    // right: 0;
+    // bottom: px2rem(79);
+    // left: 0;
+    // height: px2rem(622);
+    // max-height: px2rem(600);
+    overflow: hidden;
+    /* Prevent native touch events on Windows */
+    -ms-touch-action: none;
+    /* Prevent the callout on tap-hold and text selection */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* Prevent text resize on orientation change, useful for web-apps */
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+
+  #addvisajindu_scroller {
+    // position: absolute;
+    width: 100%;
+    // height: px2rem(600);
+    /* Prevent elements to be highlighted on tap */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /* Put the scroller into the HW Compositing layer right from the start */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}

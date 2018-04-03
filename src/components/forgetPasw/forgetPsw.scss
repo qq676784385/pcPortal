@@ -1,0 +1,71 @@
+.forgetpsw{
+	min-width: 596px;
+	margin-top: 96px;
+	
+
+	.title{
+		margin-top: 46px;
+		font-size: 20px;
+		color: #333;
+		margin-bottom: 35px;
+		text-align: center;
+	}
+	.forgetCont{
+		margin: 0 auto;
+		width: 416px;
+		.info{
+			margin-bottom: 13px;
+			label{
+				display: inline-block;
+				width: 90px;
+				text-align: right;
+				font-size: 14px;
+				color: #333;
+				margin-right: 15px;
+			}
+			input{
+				width: 279px;
+				height: 30px;
+				padding-left: 15px;
+				border:1px solid #efefef;
+				font-size: 14px;
+			}
+			.yzInput{
+				width: 181px;
+				margin-right: 10px;
+			}
+			.sendcode{
+				display: inline-block;
+				height: 35px;
+				width: 88px;
+				line-height: 35px;
+				text-align: center;
+				background: #188EEE;
+				font-size: 14px;
+				color: #fff;
+				border-radius: 2px;
+				opacity: 0.6;
+				cursor: pointer;
+			}
+			.yzGray{
+				background: #ccc;
+			}
+			input::-webkit-input-placeholder{
+				color:#C1C1C1;
+			}
+		}
+		.submitBtn{
+			margin-left: 115px;
+			width: 88px;
+			height: 34px;
+			background: #188EEE;
+			text-align: center;
+			line-height: 34px;
+			color: #fff;
+			font-size: 14px;
+			border-radius: 2px;
+			margin-top: 20px;
+			cursor: pointer;
+		}
+	}
+}

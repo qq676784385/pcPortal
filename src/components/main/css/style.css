@@ -1,0 +1,8 @@
+@import '../../css/px2rem.scss';
+$designWidth: 1280;
+
+.main{
+	padding: 0;
+	margin: 0;
+}
+

@@ -1,0 +1,91 @@
+
+
+.banner{
+	background: #FFF;
+	height: 42px;
+	margin: 0;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	box-shadow: 0px 1px 5px #D8D8D8;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 9;
+
+
+	.logoDiv{
+		border-right: 1px solid #BFBFBF;
+		width: 217px;
+		height: 42px;
+		text-align: center;
+		float: left;
+		text-align: center;
+		// background: #fff;
+
+		img{
+			// width: px2rem(102);
+			height: 42px;
+			// float: left;
+		}
+	}
+
+	.loginOut{
+		font-size: 14px;
+		color:#188EEE;
+		float: right;
+		margin-right: 67px;
+		margin-left: 16px;
+		margin-top: 23px;
+	}
+	.userInfo{
+		font-size: 14px;
+		color:#333;
+		float: right;
+		margin-top: 23px;
+		margin-right: 67px;
+		cursor: pointer;
+		position: relative;
+		.marginLeft30{
+			margin-left: 20px;
+		}
+		.option{
+			position: absolute;
+			top: 47px;
+			// right: 6px;
+			 right: -46px;
+			background: #fff;
+			text-align: center;
+			border:1px solid #efefef;
+			box-shadow: 0px 1px 5px #D8D8D8;
+			.text{
+				width: 152px;
+				height: 50px;
+				line-height: 50px;
+				border-bottom: 1px solid #efefef;
+			}
+			.text:nth-child(2){
+				border:0;
+			}
+			.triangle{
+				position: absolute;
+				top: -14px;
+				left: 75px;
+
+				.t1{
+					width: 0;
+					border-bottom: 13px solid #D8D8D8;
+					border-right: 15px solid transparent;
+					border-left: 15px solid transparent;
+				}
+				.t2{
+					position: absolute;
+					top: 1px;
+					width: 0;
+					border-bottom: 13px solid #fff;
+					border-right: 15px solid transparent;
+					border-left: 15px solid transparent;
+				}
+			}
+		}
+	}
+}

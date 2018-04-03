@@ -1,0 +1,61 @@
+.selectCountry{
+	
+	.addPossport{
+		// background: red;
+		// text-align: center;
+		border-bottom: 1px solid #efefef;
+		padding-bottom: 24px;
+		margin-bottom: 26px;
+		.number{
+			font-size: 14px;
+			color: #333;
+			margin-right: 15px;
+
+			input{
+				width: 223px;
+				height: 34px;
+				border:1px solid #efefef;
+				padding-left: 10px;
+			}
+		}
+		.checkBtn{
+			width: 88px;
+			height: 34px;
+			color: #fff;
+			background: #188EEE;
+			font-size: 14px;
+			text-align: center;
+			line-height: 34px;
+			border-radius: 2px;
+			margin-top: 16px;
+			margin-left: 64px;
+			cursor: pointer;
+		}
+	}
+	.country{
+
+		.tip{
+			font-size: 14px;
+			color: #333;
+		}
+		form{
+			label{
+				display: block;
+				margin-top: 14px;
+			}
+		}
+		.checkBtn{
+			width: 88px;
+			height: 34px;
+			color: #fff;
+			background: #188EEE;
+			font-size: 14px;
+			text-align: center;
+			line-height: 34px;
+			border-radius: 2px;
+			margin-top: 24px;
+			margin-left: 64px;
+			cursor: pointer;
+		}
+	}
+}

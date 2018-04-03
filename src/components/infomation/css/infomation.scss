@@ -1,0 +1,311 @@
+@import '../../css/px2rem.scss';
+$designWidth: 750;
+
+.applyTableInfo {
+  padding-bottom: 50px;
+  // color: red;
+  .mask{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    // background: red;
+    opacity: 0
+  }
+  .page {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,0.35);
+
+    .tipcolumn1 {
+      width: 280px;
+      height: 160px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background: #fff;
+      border-radius: 4px;
+      font-size: 14px;
+      color: #333;
+      padding: 10px;
+
+      .tip_title{
+        text-align: center;
+        // font-size: 16px;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+
+      .tip_btn {
+          text-align: right;
+          margin-top: 20px;
+
+          div{
+            display: inline-block;
+            width: 50px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 2px;
+            cursor: pointer;
+          }
+          .submit{
+            background: #188EEE;
+            color: #fff;
+            margin-right: 10px;
+          }
+          .cancel{
+            background: #fff;
+            border:1px solid #e2e2e2;
+
+          }
+
+      }
+    }
+  }
+
+  .page1 {
+    .downline {
+      border-bottom: 1px  dashed #eee;
+    }
+
+
+
+    .gray {
+      background: #fff !important;
+      .downline{
+        .key_GP{
+          background: #fff;
+          border:0;
+        }
+      }
+    }
+
+    .info {
+      background: white;
+      font-size: 0;
+      box-sizing: border-box;
+      position: relative;
+
+      .downline{
+        position: relative;
+        select {
+          opacity: 0;
+          position: absolute;
+          left: 175px;
+          top: 0px;
+          bottom: 0px;
+          margin: auto;
+          width: 429px;
+        }
+      }
+
+
+
+      .datainput {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+      }
+
+      .you {
+        font-size: px2rem(20);
+        height: px2rem(10);
+        display: inline-block;
+        vertical-align: middle;
+        transform: rotate(0deg);
+      }
+      .checkbox{
+        width: 220px;
+        position: absolute;
+        left: 650px;
+        bottom:33%;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 14px;
+        input{
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+      .inputSpan{
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .rotate {
+        transform: rotate(90deg);
+      }
+
+      .key {
+        display: inline-block;
+        width: 162px;
+        padding:8px 0px;
+        text-align: center;
+        color: #333333;
+        font-size: 14px;
+        vertical-align: middle;
+        word-break: break-all;
+        background: #F7F7F7;
+        border: 1px solid #eeeeee;
+        margin-bottom: 14px;
+        margin-top: 14px;
+        margin-right: 12px;
+      }
+      .div_i{
+        display: inline-block;
+        position: absolute;
+        padding-top: px2rem(3);
+      }
+      .tanhao {
+        color: #12b7f9;
+        font-size: px2rem(32);
+      }
+
+      .red {
+        color: red;
+      }
+
+      .huise {
+        color: #6F6F6F;
+      }
+
+      .value {
+        outline: none;
+        border: 0;
+        display: inline-block;
+        vertical-align: middle;
+        width: 429px;
+        word-break: break-all;
+        border:1px solid #eeeeee;
+        font-size: 14px;
+        color: #333333;
+        height: 35px;
+        line-height: 35px;
+        padding-left: 12px;
+      }
+      .value[contenteditable="false"]{
+        cursor:not-allowed;
+      }
+
+      .triangle {
+        display: inline-block;
+        vertical-align: middle;
+        border-left: px2rem(15) solid transparent;
+        border-right: px2rem(15) solid transparent;
+        border-top: px2rem(20) solid #13b7f6;
+        margin-left: -20px;
+      }
+
+      @media screen  and(max-width: 1200px){
+        .value{
+          width: 200px;
+        }
+        .checkbox{
+          left:430px;
+          width: 220px;
+          display: inline-block;
+        }
+        select {
+          width: 200px !important;
+        }
+      }
+    }
+    .suojin{
+      padding-left: 14px;
+      // select {
+      //   opacity: 1;
+      //   position: absolute;
+      //   left: 188px;
+      //   top: 0px;
+      //   bottom: 0px;
+      //   margin: auto;
+      // }
+    }
+    // #HZ0014{
+    //   select{
+    //     top: -60px;
+    //   }
+    // }
+  }
+
+  .column1 {
+    background: #fff;
+    padding-top:20px;
+    padding-bottom:20px;
+    position: fixed;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    box-shadow: 1px 1px 2px #D8D8D8;
+    padding-right: 40px;
+    text-align: right;
+
+    .x_btn {
+      display: inline-block;
+      background: #188EEE;
+      width: 60px;
+      height: 34px;
+      line-height: 34px;
+      text-align: center;
+      font-size: 14px;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+
+  #tianbiao_wrapper {
+    // height: 74.4%;
+    width: 100%;
+    top: px2rem(0);
+    position: absolute;
+    background: white;
+    bottom: px2rem(120);
+    border-bottom: px2rem(2) solid #f3f4f6;
+    // bottom:px2rem(0);
+    // top: px2rem(550);
+    // right: 0;
+    // bottom: px2rem(79);
+    // left: 0;
+    // height: px2rem(622);
+    // max-height: px2rem(600);
+    overflow: hidden;
+    /* Prevent native touch events on Windows */
+    -ms-touch-action: none;
+    /* Prevent the callout on tap-hold and text selection */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* Prevent text resize on orientation change, useful for web-apps */
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+
+  #tianbiao_scroller {
+    // position: absolute;
+    width: 100%;
+    // height: px2rem(600);
+    /* Prevent elements to be highlighted on tap */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /* Put the scroller into the HW Compositing layer right from the start */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}

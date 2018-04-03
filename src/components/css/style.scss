@@ -1,0 +1,40 @@
+body {
+	font-size: 14px;
+	margin: 0 auto;
+	// min-width: 1000px;
+	background: #F7F7F7;
+	// -webkit-user-select: none;
+	// -moz-user-select: none;
+	// -khtml-user-select: none;
+	// -ms-user-select: none;
+	// /* 以下两个属性目前并未支持，写在这里为了减少风险 */
+	// -o-user-select: none;
+	// user-select: none;
+}
+/* 弹窗样式修改 */
+
+.notify .notify-main {
+	overflow: hidden;
+}
+
+.notify .notify-btns {
+	margin-bottom: 10px;
+}
+
+.notify .notify-btns button {
+	background: #188EEE;
+	border-width: 0;
+}
+
+.notify .notify-alert h2.notice-title {
+	// display: none;
+}
+
+.notify .notify-msg {
+	line-height: 48px;
+}
+
+.notify .notify-mask {
+	background-color: #fff!important;
+	opacity: 0.6!important;
+}

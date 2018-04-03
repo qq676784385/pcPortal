@@ -1,0 +1,366 @@
+@import '../../css/px2rem.scss';
+$designWidth: 750;
+
+.baseInfo_NewZealand {
+  // .page {
+  //   position: fixed;
+  //   left: 0;
+  //   right: 0;
+  //   top: 0;
+  //   bottom: 0;
+  //   background: rgba(0,0,0,0.35);
+
+  //   .tipcolumn1 {
+  //     width: px2rem(710);
+  //     height: px2rem(362-88);
+  //     top: 50%;
+  //     left: 50%;
+  //     margin-left: px2rem(-355);
+  //     margin-top: px2rem(-181+44);
+  //     position: absolute;
+  //     // opacity: 0;
+  //     .column21 {
+  //       width: px2rem(710-94);
+  //       background: white;
+  //       border-radius: px2rem(10) px2rem(10) 0 0;
+  //       text-align: center;
+  //       font-size: px2rem(28);
+  //       color: #666666;
+  //       padding: px2rem(58) px2rem(47) px2rem(49);
+
+  //       .title {
+  //         display: block;
+  //         font-size: px2rem(34);
+  //         font-weight: bold;
+  //       }
+
+  //       .content {
+  //         margin-top: px2rem(24);
+  //         display: block;
+  //         text-align: left;
+  //       }
+  //     }
+
+  //     .btn {
+  //       height: px2rem(88);
+  //       line-height: px2rem(88);
+  //       border-radius: 0 0 px2rem(10) px2rem(10);
+  //       background: white;
+  //       border-top: px2rem(2) solid #D8D8DC;
+  //       font-size: px2rem(34);
+
+  //       .cancel {
+  //         text-align: center;
+  //         width: 50%;
+  //         float: left;
+  //         border-right: px2rem(2) solid #D8D8DC;
+  //         color: #12b7f5;
+  //         // background: yellow;
+  //       }
+
+  //       .submit {
+  //         text-align: center;
+  //         // width: 50%;
+  //         right: right;
+  //         color: #12b7f5;
+  //         // background: green;
+  //       }
+  //     }
+  //   }
+  // }
+  // .column1 {
+  //   font-size: 0;
+  //   text-align: center;
+  //   display: inline-block;
+  //   width: 100%;
+  //   // padding-top: px2rem(30);
+  //   padding-top: px2rem(30);
+  //   background: #F7F7F7;
+
+  //   .part1 {
+
+  //     height: px2rem(100);
+  //     // background: red;
+  //     width: px2rem(71+58-4);
+  //     display: inline-block;
+  //     // float: left;
+  //     color: #12B7F5;
+  //     margin-bottom: px2rem(20);
+  //   }
+
+  //   .part2 {
+  //     display: inline-block;
+  //     // float: left;
+  //     height: px2rem(100);
+  //     width: px2rem(71+58-4);
+  //     // color: #12B7F5;
+  //     // background: yellow;
+  //   }
+
+  //   .part3 {
+  //     display: inline-block;
+  //     // float: left;
+  //     width: px2rem(71+58-4);
+  //     height: px2rem(100);
+  //     // background: blue;
+  //   }
+
+  //   .part4 {
+  //     display: inline-block;
+  //     // float: left;
+  //     width: px2rem(71+58-4);
+  //     height: px2rem(100);
+  //     // background: green;
+  //   }
+
+  //   .part5 {
+  //     display: inline-block;
+  //     // float: right;
+  //     width: px2rem(71+58-4);
+  //     height: px2rem(100);
+  //     // background: green;
+  //   }
+
+  //   .part6 {
+  //     display: inline-block;
+  //     // float: right;
+  //     width: px2rem(71+58-4);
+  //     height: px2rem(100);
+  //     // background: green;
+  //   }
+
+  //   i {
+  //     position: relative;
+  //     // margin-left: px2rem(71);
+  //     // display: block;
+  //     display: inline-block;
+  //     // line-height: 50%;
+  //     font-size: px2rem(44);
+  //     height: px2rem(0);
+  //     //  font-size: inherit;
+  //     // font: normal normal normal 14px/1 "your-icon-font-here";
+  //     // line-height: px2rem(14);
+  //     // height: px2rem(10);
+  //     // margin-top: px2rem(30);
+  //     // color: red;
+  //   }
+
+  //   .tip {
+  //     margin-top: px2rem(12);
+  //   }
+
+  //   span {
+  //     display: block;
+  //     font-size: px2rem(22);
+  //   }
+
+  //   .jiantou {
+  //     display: inline-flex;
+  //     position: absolute;
+  //     top: px2rem(50);
+  //     // float: left;
+  //     height: px2rem(100);
+  //     // margin-top: px2rem(0);
+  //     // background: #335599;
+  //     width: px2rem(20);
+  //     // line-height: px2rem(130);
+  //     // font-size: 0;
+  //     i {
+  //       display: block;
+  //       margin-left: px2rem(-10);
+  //       font-size: px2rem(24);
+  //     }
+  //   }
+  // }
+  // ////////
+  .page01 {
+    .zhushenqingren {
+      background: white;
+
+      .huzhaohao {
+        color: #333;
+        font-size: 16px;
+        margin-bottom: 10px;
+        // padding-left: px2rem(23);
+        // padding-top: px2rem(48);
+        // font-weight: bold;
+      }
+
+      .shenqingren {
+        margin-left: 20px;
+        padding-right: 20px;
+        height: 34px;
+        line-height: 34px;
+
+        .txt {
+          font-size: 14px;
+          color: #6F6F6F;
+        }
+
+        .yuan {
+          display: inline-block;
+          float: right;
+          margin-top: 12px;
+          width: 12px;
+          height: 12px;
+          border: 1px solid #e2e2e2;
+          border-radius: 10px;
+        }
+        .yuan.active_blue{
+          width: px2rem(12);
+          height: px2rem(12);
+          border: px2rem(16) solid #188EEE;
+        }
+      }
+      .borderline{
+          border-bottom: 1px solid #e2e2e2;
+      }
+    }
+
+    .tishi {
+      height: 100%;
+      margin-bottom: px2rem(110);
+      .txt1 {
+        font-size: px2rem(30);
+        color: #444444;
+        display: block;
+        padding-top: px2rem(48);
+        padding-left: px2rem(23);
+      }
+
+      .txt2 {
+        font-size: px2rem(28);
+        color: #444444;
+        display: block;
+        padding-top: px2rem(32);
+        padding-left: px2rem(56);
+      }
+
+      .txt3 {
+        font-size: px2rem(28);
+        color: #7A7A7B;
+        display: block;
+        padding-left: px2rem(56);
+        // padding-right: px2rem(56);
+      }
+      .marginT48{
+        margin-top: px2rem(48);
+      }
+      .paddingL27{
+        // padding-left: px2rem(27);
+      }
+    }
+    .addMode{
+      margin-top: 30px;
+      .intelligent{
+        margin-bottom: 20px;
+        display: block;
+        input{
+          float: left;
+        }
+        .i_text{
+          float: left;
+          width: 70px;
+          font-size: 16px;
+          color: #333;
+          margin-right: 10px;
+          margin-left: 10px;
+        }
+        .i_detail{
+          padding-left: 50px;
+          color: #6f6f6f;
+
+        }
+      }
+    }
+    .btnbg{
+      // height: 40px;
+      // line-height: 40px;
+
+      margin-top: 20px;
+      .btn_btnbg{
+        font-size: 16px;
+        color: #fff;
+        // width:266px;
+        // width:100%;
+        width: 88px;
+        text-align: center;
+        background: #188EEE;
+        height: 34px;
+        line-height: 34px;
+        border-radius: 4px;
+      }
+      .btn{
+        background:#48A2EB;
+        color: white;
+      }
+      .btnGray{
+        background: #ccd3db;
+      }
+    }
+    .mainApplicant_tipBg{
+      background: rgba(0,0,0,.35);
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      color: #000;
+      padding: 0 px2rem(20);
+
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+
+      .tipInfo{
+        background: #fff;
+        text-align: center;
+        padding-top: 20px;
+        border-radius:4px;
+        width: 400px;
+        .tip_h1{
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .tip_cont{
+          padding: 15px 10px 15px 12px;
+          font-size: 14px;
+          color: #333;
+          text-align: left;
+        }
+
+        .tip_btns{
+          font-size: 14px;
+          border-top:1px solid #e2e2e2;
+          text-align: right;
+          padding: 10px;
+          div{
+            width: 60px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            display: inline-block;
+            border:1px solid #e2e2e2;
+            border-radius: 4px;
+            text-align: center;
+            cursor: pointer;
+          }
+          .cancel{
+            color: #333333;
+            margin-right: 10px;
+          }
+          .ok{
+            background: #188EEE;
+            border-color: #188EEE;
+            color: #ffffff;
+          }
+        }
+
+
+      }
+    }
+  }//page0
+}
