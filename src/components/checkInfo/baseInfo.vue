@@ -38,6 +38,14 @@
          <div id="div0"  class="value">
            {{mudi}}
          </div>
+         <select v-model='mudi'>
+               <option value='-1'></option>
+               <option value="旅游">旅游</option>
+               <option value="商务">商务</option>
+               <option value="探亲">探亲</option>
+ 		</select>
+         <div class="triangle" :class='haveVisaUSA=="否"?"triangleC":""'>
+         </div>
         </div>
       </div>
 
@@ -661,12 +669,22 @@ export default {
       //   sinceMarried = false
       // }
       // console.log(sinceMarried,'MMMMMMMMMMM222');
+      console.log(_arr[_id]);
+      var obj = {
+          "旅游":1,
+          "商务":4,
+          "探亲":5
+      }
+      console.log(obj[this.mudi],this.mudi,this.status);
+      return
+      // VisaType --1 4 5
+      // Cause -- 旅游  商务 探亲
       this.$http.post(this.$store.state.app.host + 'api/Wechat/CreateUserVisa', {
         UserVisaId: this._uvid,
         PassportNumber: _arr[_id].Passport,
         Name: _arr[_id].CustomerName,
         CountryId: _arr[_id].CountryId,
-        VisaType: _arr[_id].VisaType,
+        VisaType: obj[this.mudi],
         Career: this.status[1],
         Married: sinceMarried,
         VisaName: _arr[_id].VisaName,
@@ -675,7 +693,8 @@ export default {
         Agent: _arr[_id].Agent,
         Sales: _arr[_id].Sales,
         Destination: _arr[_id].Destination,
-        Cause: this.status[0],
+        // Cause: this.status[0],
+        Cause: this.mudi,
         PayStatus: _arr[_id].PayStatus,
         Phone: _arr[_id].Phone,
         IsPersonal: _arr[_id].IsPersonal,
