@@ -42,7 +42,14 @@
       <div class='colLine'>
         <i></i>
         <span class='lineName'>出行目的</span>
-        <input type="text" name="" disabled="disabled" v-model='VisaType[mainApplicantInfo.VisaType]'>
+        <!-- <input type="text" name="" disabled="disabled" v-model='VisaType[mainApplicantInfo.VisaType]'> -->
+        <select v-model='mainApplicantInfo.VisaType' :on-change='getDataStatus()'>
+              <option value='-1'></option>
+              <option value="1">旅游</option>
+              <option value="4">商务</option>
+              <option value="5">探亲</option>
+		</select>
+        <span class="triangle"></span>
       </div>
       <div class='colLine'>
         <i></i>
@@ -206,13 +213,13 @@
   </div>
   <div class="addMode">
     <form>
-        <label class="intelligent">
+      <label class="intelligent">
           <input type="radio" name="model" value="0" v-model='show_model'>
           <div class="i_text">智能模式</div>
           <div class="i_detail">智能模式：可自动识别证件内容，需要上传证件及资料图片，提交后直接进入签证部审核，加快办理速度。
           </div>
         </label>
-        <label class="intelligent">
+      <label class="intelligent">
           <input type="radio" name="model" value="1"  v-model='show_model'>
           <div class="i_text">普通模式</div>
           <div class="i_detail">普通模式：仅填写文字信息，无需上传证件及资料图片，线上提交后需等待纸质资料寄送至签证部后开始审核。
@@ -232,8 +239,8 @@ export default {
   props: ['personType1', 'olddata'],
   data() {
     return {
-      show_model:0,
-      yzBtn:false,//判断验证按钮是否点下
+      show_model: 0,
+      yzBtn: false, //判断验证按钮是否点下
       VerifySuccessNum: '', //正在验证的ID
       getOlddata: '',
       showTip: false,
@@ -303,10 +310,11 @@ export default {
         childData.push(obj)
       }
       var _IsSpouseFollow = false;
-      if(this.mainApplicantInfo.Married==1 &&  this.mainApplicantInfo.IsSpouse==1){
+      if (this.mainApplicantInfo.Married == 1 && this.mainApplicantInfo.IsSpouse == 1) {
         _IsSpouseFollow = true
       }
-       // alert(this.$store.state.info.UserVisaId)
+      // alert(this.$store.state.info.UserVisaId)
+
 
       this.$http.post(this.$store.state.app.host + 'api/Wechat/CreateUserVisaNZL', {
         "CallId": parseInt(new Date().getTime()),
@@ -347,19 +355,19 @@ export default {
             // alert(res.data.Result.UserVisaId)
             this.$store.state.info.UserVisaId = res.data.Result
             window.localStorage.setItem('UserVisaId', JSON.stringify(res.data.Result))
-              window.localStorage.setItem('showmodel',this.show_model)
-              var that = this
-              if (this.show_model == 1) {
-                this.setPaperProgress(1,100)
-                var t=setTimeout(function () {
-                  that.setPaperProgress(3,100)
-                }, 500);
-              } else {
-                this.setPaperProgress(1,0)
-                var t=setTimeout(function () {
-                  that.setPaperProgress(3,0)
-                }, 1000);
-              }
+            window.localStorage.setItem('showmodel', this.show_model)
+            var that = this
+            if (this.show_model == 1) {
+              this.setPaperProgress(1, 100)
+              var t = setTimeout(function() {
+                that.setPaperProgress(3, 100)
+              }, 500);
+            } else {
+              this.setPaperProgress(1, 0)
+              var t = setTimeout(function() {
+                that.setPaperProgress(3, 0)
+              }, 1000);
+            }
             var _arr = []
             var _obj = {
               "VisaID": res.data.Result,
@@ -411,22 +419,22 @@ export default {
 
       // alert(this.personType+'   '+Number(Number(this.getMainPersonData.NZLField.PassportIdentity)+1))
       // alert(this.$store.state.info.UserVisaId)
-      if (this.$store.state.info.UserVisaId == ''||this.$store.state.info.UserVisaId==null) {
+      if (this.$store.state.info.UserVisaId == '' || this.$store.state.info.UserVisaId == null) {
         this.showTip = true;
         return
       }
-        // alert(this.$store.state.info.UserVisaId)
+      // alert(this.$store.state.info.UserVisaId)
       console.log(this.personType, Number(Number(this.getOlddata.NZLField.PassportIdentity) + 1));
       if (this.personType != Number(Number(this.getOlddata.NZLField.PassportIdentity) + 1)) {
         // this.$router.push({
         //   path: '/addpersonalInfo/xuzhi'
         // })
-          this.showTip = true;
+        this.showTip = true;
       } else {
         console.log(this.getOlddata);
         console.log(this.childrenInfo.data);
 
-          //下面的代码 只有当主申请人 职业 婚姻 变化的时候 走修改接口
+        //下面的代码 只有当主申请人 职业 婚姻 变化的时候 走修改接口
         var _IsSpouse = this.mainApplicantInfo.IsSpouse == '0' ? false : true
         // alert(this.mainApplicantInfo.Career!=this.getOlddata.Career)
         // alert(this.mainApplicantInfo.Married!=this.getOlddata.Married)
@@ -434,14 +442,14 @@ export default {
         // alert(_IsSpouse!=this.getOlddata.NZLField.IsSpouseFollow)
         // alert(this.mainApplicantInfo.Career!=this.getOlddata.Career || this.mainApplicantInfo.Married!=this.getOlddata.Married  || this.mainApplicantInfo.IsChild!=this.getOlddata.NZLField.MinorChildrenFollow || _IsSpouse!=this.getOlddata.NZLField.IsSpouseFollow)
         if (this.mainApplicantInfo.Career != this.getOlddata.Career || this.mainApplicantInfo.Married != this.getOlddata.Married || this.mainApplicantInfo.IsChild != this.getOlddata.NZLField.MinorChildrenFollow || _IsSpouse != this.getOlddata.NZLField
-          .IsSpouseFollow||this.mainApplicantInfo.IsChild!=this.getOlddata.NZLField.MinorChildrenFollow) {
+          .IsSpouseFollow || this.mainApplicantInfo.IsChild != this.getOlddata.NZLField.MinorChildrenFollow) {
           // alert(1)
           this.showTip = true;
         } else {
-          for (var i = 0; i < this.childrenInfo.data.length; i++) {//判断多个子女的时候 子女的职业变化 上面的IF 已经判断了子女的数量
-            if(this.childrenInfo.data[i].Career!=this.getOlddata.NZLField.MinorChildrenInfo[i].ChildCareer){
-                this.showTip = true;
-                return
+          for (var i = 0; i < this.childrenInfo.data.length; i++) { //判断多个子女的时候 子女的职业变化 上面的IF 已经判断了子女的数量
+            if (this.childrenInfo.data[i].Career != this.getOlddata.NZLField.MinorChildrenInfo[i].ChildCareer) {
+              this.showTip = true;
+              return
             }
           }
           this.submitBtn()
@@ -459,12 +467,16 @@ export default {
 
 
     },
-    setPaperProgress(progressType,num){
+    setPaperProgress(progressType, num) {
       this.$http.post(this.$store.state.app.host + "api/Manage/SetPaperProgress", {
           UserVisaId: this.$store.state.info.UserVisaId,
           TypeId: progressType,
           Progress: num
-        }, { headers: { Authorization: this.$store.state.app.token } })
+        }, {
+          headers: {
+            Authorization: this.$store.state.app.token
+          }
+        })
         .then(
           function(res) {
 
@@ -580,7 +592,7 @@ export default {
     passportVerification(str) {
       console.log(str);
       var sf = this.VerifySuccessNum; //当前选择的身份
-      console.log('身份',sf);
+      console.log('身份', sf);
       var reg = /^[A-Za-z0-9]{9}$/
       // console.log(arr[5].value.match(reg),'<<<<')
       if (str == '') {
@@ -597,14 +609,14 @@ export default {
       if (sf != '1') {
         if (str == this.mainApplicantInfo.Passport) {
           // this.$root.showTip1(['输入的护照号码与主申请人相同！'])
-            alert('输入的护照号码与主申请人相同！')
+          alert('输入的护照号码与主申请人相同！')
           return
         }
       }
       if (sf != '2') {
         if (str == this.spouseInfo.Passport) {
           // this.$root.showTip1(['输入的护照号码与主申请人配偶相同！'])
-              alert('输入的护照号码与主申请人配偶相同！')
+          alert('输入的护照号码与主申请人配偶相同！')
           return
         }
       }
@@ -612,16 +624,16 @@ export default {
         for (var i = 0; i < this.childrenInfo.data.length; i++) {
           if (this.childrenInfo.data[i].Passport == str) {
             // this.$root.showTip1(['输入的护照号码与主申请人子女相同！'])
-              alert('输入的护照号码与主申请人子女相同！')
+            alert('输入的护照号码与主申请人子女相同！')
             return
           }
         }
-      }else if (sf == '3'){
+      } else if (sf == '3') {
         for (var i = 0; i < this.childrenInfo.data.length; i++) {
-          if(i!=this.childredId){
+          if (i != this.childredId) {
             if (this.childrenInfo.data[i].Passport == str) {
               // this.$root.showTip1(['输入的护照号码与主申请人子女相同！'])
-                alert('输入的护照号码与主申请人子女相同！')
+              alert('输入的护照号码与主申请人子女相同！')
               return
             }
           }
@@ -639,12 +651,12 @@ export default {
           if (res.data.Code == 0) {
             console.log(res.data.Result.VisaID);
             if (res.data.Result.VisaID != 0) {
-              if(res.data.Result.VisaID == this.$store.state.info.UserVisaId){
+              if (res.data.Result.VisaID == this.$store.state.info.UserVisaId) {
                 //判断这个签证ID ，是否是当前在办理的签证ID。解决子女变化时候，情况所有子女信息。在录入信息后提示正在办理
-                  this.yanzhengPassport(str)
-              }else{
+                this.yanzhengPassport(str)
+              } else {
                 // this.$root.showTip1(['输入的护照号码已在办理中！'])
-                  alert('输入的护照号码已在办理中！')
+                alert('输入的护照号码已在办理中！')
               }
               return
             } else {
@@ -714,11 +726,11 @@ export default {
 
             } else {
               // this.$root.showTip1(['没有找到相应的签证信息，请检查护照号是否输入正确，或联系销售人员核实。'])
-                alert('没有找到相应的签证信息，请检查护照号是否输入正确，或联系销售人员核实。')
+              alert('没有找到相应的签证信息，请检查护照号是否输入正确，或联系销售人员核实。')
             }
           } else {
             // this.$root.showTip1([res.data.Message])
-              alert(res.data.Message)
+            alert(res.data.Message)
 
           }
         },
@@ -956,9 +968,9 @@ export default {
         this.mainApplicantInfo.Passport = this.getOlddata.PassportNumber
         this.mainApplicantInfo.CustomerName = this.getOlddata.Name
 
-        if(window.localStorage.getItem('newcreated')=='2'){
+        if (window.localStorage.getItem('newcreated') == '2') {
           this.mainApplicantInfo.VisaType = (this.getOlddata.VisaType)
-        }else{
+        } else {
           this.mainApplicantInfo.VisaType = this.getHashVisaType(this.getOlddata.VisaType)
 
         }
@@ -1068,21 +1080,21 @@ export default {
   created() {
     this.getOlddata = JSON.parse(window.localStorage.getItem('nzlOldData'))
     // if (this.$store.state.info.PhoneToken == '') {
-      this.$store.state.info.PhoneToken = window.localStorage.getItem('PhoneToken')
+    this.$store.state.info.PhoneToken = window.localStorage.getItem('PhoneToken')
     // }
     this.$store.state.info.visaList = JSON.parse(window.localStorage.getItem('info'))
     this.$store.state.info.seleNum = window.localStorage.getItem('seleNum')
     // if (this.$store.state.info.UserVisaId == '') {
-    this.$store.state.info.UserVisaId = window.localStorage.getItem('UserVisaId')==null||window.localStorage.getItem('UserVisaId')==undefined?'':window.localStorage.getItem('UserVisaId')
+    this.$store.state.info.UserVisaId = window.localStorage.getItem('UserVisaId') == null || window.localStorage.getItem('UserVisaId') == undefined ? '' : window.localStorage.getItem('UserVisaId')
     console.log(this.$store.state.info.UserVisaId);
 
     console.log(this.visatype, '+++++');
     if (this.$store.state.info.UserVisaId != '') {
       console.log(this.$store.state.info.visaList[this.$store.state.info.seleNum].VisaType);
 
-        this.visatype = this.getHashVisaType(this.$store.state.info.visaList[this.$store.state.info.seleNum].VisaType)
+      this.visatype = this.getHashVisaType(this.$store.state.info.visaList[this.$store.state.info.seleNum].VisaType)
 
-  console.log(this.visatype, '+++++');
+      console.log(this.visatype, '+++++');
       switch (this.getOlddata.NZLField.PassportIdentity) {
         case 0:
           this.passportNum = this.getOlddata.PassportNumber
@@ -1104,10 +1116,10 @@ export default {
       }
 
     } else {
-      if(window.localStorage.getItem('newcreated')==1){
-      this.visatype = this.$store.state.info.visaList[this.$store.state.info.seleNum].VisaType
-      }else{
-      this.visatype = this.getHashVisaType(this.$store.state.info.visaList[this.$store.state.info.seleNum].VisaType)
+      if (window.localStorage.getItem('newcreated') == 1) {
+        this.visatype = this.$store.state.info.visaList[this.$store.state.info.seleNum].VisaType
+      } else {
+        this.visatype = this.getHashVisaType(this.$store.state.info.visaList[this.$store.state.info.seleNum].VisaType)
       }
 
 
@@ -1125,9 +1137,9 @@ export default {
     this.getMainPersonData = JSON.parse(JSON.stringify(this.$store.state.info.visaList[this.$store.state.info.seleNum]))
     console.log(this.passportNum, this.name, this.visatype, '?????????');
     // this.passportNum = '123321'
-    if(window.localStorage.getItem('showmodel')==''){
-      this.show_model =  this.$store.state.info.visaList[this.$store.state.info.seleNum].ShowModel
-    }else{
+    if (window.localStorage.getItem('showmodel') == '') {
+      this.show_model = this.$store.state.info.visaList[this.$store.state.info.seleNum].ShowModel
+    } else {
       this.show_model = window.localStorage.getItem('showmodel')
     }
 
