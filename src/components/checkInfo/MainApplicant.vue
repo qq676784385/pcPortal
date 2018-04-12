@@ -58,11 +58,11 @@
           <option value='-1'></option>
 					<option value='1'>自雇</option>
 					<option value='6'>受雇</option>
-					<option value='5'>自由职业</option>
-					<option value='4'>退休</option>
-					<option value='3'>学生（18岁及以上）</option>
-					<option value='2'>学生（18岁以下）</option>
-					<option value='7'>学龄前儿童</option>
+					<option value='5' v-if="mainApplicantInfo.VisaType!=4">自由职业</option>
+					<option value='4' v-if="mainApplicantInfo.VisaType!=4">退休</option>
+					<option value='3' v-if="mainApplicantInfo.VisaType!=4">学生（18岁及以上）</option>
+					<option value='2' v-if="mainApplicantInfo.VisaType!=4">学生（18岁以下）</option>
+					<option value='7' v-if="mainApplicantInfo.VisaType!=4">学龄前儿童</option>
 				</select>
         <span class="triangle"></span>
       </div>
